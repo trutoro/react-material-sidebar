@@ -2,7 +2,7 @@
 
 Basic React responsive sidebar starter template built on top of [Material UI](https://material-ui.com).
 
-![Screenshot 1](screenshots/material-sidebar.png)
+![Screenshot 1](screenshots/full-screenshot.png)
 
 ## Install
 
