@@ -18,7 +18,7 @@ npm install
 npm start
 ```
 
-## Basic modification
+## Basic customization
 
 #### Adding navigation button
 
