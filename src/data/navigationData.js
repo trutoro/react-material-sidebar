@@ -10,28 +10,28 @@ export const mainNavigation = [
   {
     name: "Dashboard",
     icon: Dashboard,
-    url: "/dashboard",
+    url: `/dashboard`,
   },
   {
     name: "Posts",
     icon: ImportContacts,
-    url: "/posts",
+    url: `/posts`,
     navigationData: [
       {
         name: "All Posts",
         icon: MenuBook,
-        url: "/posts/all",
+        url: `/posts/all`,
       },
       {
         name: "Editor",
         icon: PostAdd,
-        url: "/posts/editor",
+        url: `/posts/editor`,
       },
     ],
   },
   {
     name: "Users",
     icon: PeopleAlt,
-    url: "/users",
+    url: `/users`,
   },
 ];

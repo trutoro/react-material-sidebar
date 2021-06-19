@@ -18,25 +18,25 @@ function importView(...args) {
 
 export const mainRoutes = [
   {
-    path: "/dashboard",
+    path: `/dashboard`,
     component: lazy(() => importView(["Dashboard", 2])),
   },
   {
-    path: "/posts",
+    path: `/posts`,
     component: lazy(() => importView("Posts", "routes")),
     routes: [
       {
-        path: "/posts/all",
+        path: `/posts/all`,
         component: lazy(() => importView("Posts", "Posts")),
       },
       {
-        path: "/posts/editor",
+        path: `/posts/editor`,
         component: lazy(() => importView("Posts", "Editor")),
       },
     ],
   },
   {
-    path: "/users",
+    path: `/users`,
     component: lazy(() => importView(["Users", 2])),
   },
 ];

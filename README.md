@@ -2,9 +2,11 @@
 
 Basic React responsive sidebar starter template built on top of [Material UI](https://material-ui.com).
 
+Click here for <a href="https://demo1.trutoro.io" target="_blank">live demo</a>.
+
 ![Screenshot 1](screenshots/full-screenshot.png)
 
-## Install
+## Installation
 
 ```
 git clone https://github.com/trutoro/react-material-sidebar-starter.git
@@ -20,7 +22,7 @@ npm start
 
 ## Basic customization
 
-#### Adding navigation button
+### Adding navigation button
 
 Customize navigation button by adding url in `src/data/navigationData.js`, e.g.
 
@@ -56,7 +58,7 @@ export const mainNavigation = [
 ];
 ```
 
-#### Adding navigation routes data
+### Adding navigation routes data
 
 Add the routes path data in `src/data/routesData.js`, by following the folder structure in `src/views` directory, e.g.,
 

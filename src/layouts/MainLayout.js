@@ -16,6 +16,7 @@ import {
   Menu as MenuIcon,
   ChevronLeft as ChevronLeftIcon,
   ChevronRight as ChevronRightIcon,
+  GitHub,
 } from "@material-ui/icons";
 import { makeStyles, useTheme } from "@material-ui/core/styles";
 import { useHistory } from "react-router";
@@ -147,10 +148,12 @@ const useStyles = makeStyles((theme) => ({
     },
     display: "flex",
     alignItems: "center",
+    textDecoration: "none",
+    color: "inherit",
   },
 }));
 
-const MainLayout = ({ themeConfig, navigationData, window, children }) => {
+const MainLayout = ({ themeConfig, navigationData, children }) => {
   const history = useHistory();
   const theme = useTheme();
   const [extended, setExtended] = React.useState(true);
@@ -185,21 +188,20 @@ const MainLayout = ({ themeConfig, navigationData, window, children }) => {
       <Navigation data={navigationData} collapsed={!extended} />
       <Divider />
       <Toolbar className={classes.drawerFooter}>
-        <Typography
-          component='p'
-          variant='body2'
-          align='center'
-          className={classes.copyrightText}>
-          Made with&nbsp;
-          <Favorite fontSize='small' />
-          &nbsp;by Trutoro
+        <Typography component='p' variant='body2' align='center'>
+          <a
+            href='https://trutoro.io'
+            className={classes.copyrightText}
+            rel='noreferrer'
+            target='_blank'>
+            Made with&nbsp;
+            <Favorite fontSize='small' />
+            &nbsp;by&nbsp;Trutoro
+          </a>
         </Typography>
       </Toolbar>
     </Fragment>
   );
-
-  const container =
-    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <div className={classes.root}>
@@ -235,11 +237,20 @@ const MainLayout = ({ themeConfig, navigationData, window, children }) => {
             onChange={themeConfig.handler}
             name='themeSwitch'
           />
+          <IconButton
+            color='inherit'
+            onClick={() =>
+              window.open(
+                "https://github.com/trutoro/react-material-sidebar-starter",
+                "_blank"
+              )
+            }>
+            <GitHub />
+          </IconButton>
         </Toolbar>
       </AppBar>
       <Hidden smUp implementation='css'>
         <Drawer
-          container={container}
           variant='temporary'
           anchor={theme.direction === "rtl" ? "right" : "left"}
           open={mobileOpen}
